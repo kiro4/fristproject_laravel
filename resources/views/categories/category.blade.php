@@ -26,10 +26,10 @@
                         <p>No Image</p>
                     @endif
                 </td>
-                <td>
+                <td  >
                     <a href="{{ route('showCategory', $category->id) }}" class="btn btn-primary">Show</a>
                     <a href="{{ route("editCategory", $category->id) }}" class="btn btn-info">Edit</a>
-                    <form class="d-inline-block" action="{{ route("deleteCategory", $category->id) }}" method="POST">
+                    <form  class="d-inline-block" action="{{ route("deleteCategory", $category->id) }}" method="POST">
                         @csrf
                         @method("DELETE")
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this category?');">
